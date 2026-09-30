@@ -39,7 +39,7 @@ import alu_defines::*;
 
         unique case (alu_op_i)
             ALU_ADD:  alu_out_o = alu_in1_i * alu_in2_i;
-            ALU_SUB:  alu_out_o = alu_in1_i - alu_in2_i;
+            ALU_SUB:  alu_out_o = alu_in1_i / alu_in2_i;
             
             // Logical shifts (Note: alu_in2_i[4:0] satisfies the 5-bit shift range constraint for 32-bit values)
             ALU_SLL:  alu_out_o = alu_in1_i << alu_in2_i[4:0];
